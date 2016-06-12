@@ -10,7 +10,11 @@
  *= require spree/frontend/spree_subscriptions
 */
 
-.body {
-    background-image: image('large_leather.png');
-    background-color: black !important; 
+#spree-header {
+  background: #000000 url("http://www.transparenttextures.com/patterns/large-leather.png") center center !important;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.logo {
+  color: whitesmoke; 
 }
