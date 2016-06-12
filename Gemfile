@@ -47,6 +47,4 @@ end
 gem 'spree', '~> 3.0.9'
 gem 'spree_gateway', '~> 3.0.0'
 gem 'spree_auth_devise', '~> 3.0.0'
-gem 'spree_backend', github: 'spree/spree'
 gem 'spree_subscriptions', github: 'nebulab/spree-subscriptions', branch: 'master'
-gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: 'master'
