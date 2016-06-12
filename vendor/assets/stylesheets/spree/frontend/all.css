@@ -9,12 +9,27 @@
  *= require_tree .
  *= require spree/frontend/spree_subscriptions
 */
-
+body {
+  font-family: 'Lato', sans-serif !important;
+  background: whitesmoke url("http://www.transparenttextures.com/patterns/large-leather.png") center center !important;
+}
 #spree-header {
   background: #000000 url("http://www.transparenttextures.com/patterns/large-leather.png") center center !important;
   background-size: cover;
   margin-bottom: 20px;
 }
-.logo {
-  color: whitesmoke; 
+#spree-header #logo img {
+  width: 15% !important;
+  padding-right: 3px;
+  float: left !important;
+}
+#logo {
+  color: whitesmoke !important;
+  font-size: 36px;
+  font-family: 'Engagement', cursive !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Engagement', cursive !important;
+
 }
