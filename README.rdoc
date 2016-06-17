@@ -8,3 +8,8 @@ Dependencies
 ** spree_auth_devise 3.0.0 **
 ** spree_subscriptions **
 ** Twitter Bootstrap **
+
+
+
+
+http://calm-wildwood-85185.herokuapp.com/
