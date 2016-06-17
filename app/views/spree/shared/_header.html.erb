@@ -3,16 +3,28 @@
   <header id="header" data-hook>
     <div class="container">
       <div class="row">
-        <figure id="logo" class="col-md-4 col-sm-3" data-hook>
-          Rich Leatherman
-          <br>
-          The Leather Cleaning Expert
-        </figure>
-        <%= render partial: 'spree/shared/nav_bar' %>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <figure id="logo" class="pull-left" data-hook>
+              Rich Leatherman
+            </figure>
+            <ul class="nav navbar-nav">
+
+              <li class="active"><a href="#">Home</a></li>
+              <%= render partial: 'spree/shared/login_bar' %>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-hook>
+             <li id="link-to-cart" data-hook>
+               <noscript>
+                 <%= link_to Spree.t(:cart), '/cart' %>
+               </noscript>
+               &nbsp;
+             </li>
+             <script>Spree.fetch_cart()</script>
+           </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
-  <div class="container">
-    <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
-  </div>
 </div>
