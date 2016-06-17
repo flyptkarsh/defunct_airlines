@@ -16,10 +16,16 @@
     <div class="container">
       <div class="row" data-hook>
         <%= breadcrumbs(@taxon) %>
-
+        <div class="col-sm-4 col-md-3">
+          <%= image_tag("http://www.gayartcollection.com/Media/Tom_of_Finland/Tom_of_Finland_25.jpg", width: "100%" )%>
+          <h3> The Rich Leatherman Difference</h3>
+          <p> We offer the best leather cleaning products to people who need to keep their leather wear immaculate at all times. </p>
+          <p> Standard shipping is free on all orders.</p>
+          <p> We offer subscriptions. So just as your leather cleaner is losing its gusto, a new one will arrive. </p>
+        </div>
         <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
 
-        <div id="content" class="<%= !content_for?(:sidebar) ? "col-sm-12" : "col-sm-8 col-md-9" %>" data-hook>
+        <div id="content" class="col-sm-8 col-md-9" data-hook>
           <%= flash_messages %>
           <%= yield %>
         </div>
