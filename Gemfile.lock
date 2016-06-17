@@ -9,6 +9,14 @@ GIT
       spree (~> 3.0)
 
 GIT
+  remote: git://github.com/spree-contrib/spree-product-assembly.git
+  revision: 6987a3914ccf714bcee300d88d7c27b75a455ef1
+  branch: 3-0-stable
+  specs:
+    spree_product_assembly (3.0.0)
+      spree_backend (~> 3.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_mail_settings.git
   revision: d416a1e355893bda625ed5bea187d39526aa52f9
   branch: 3-0-stable
@@ -433,6 +441,7 @@ DEPENDENCIES
   spree_auth_devise (~> 3.0.0)
   spree_gateway (~> 3.0.0)
   spree_mail_settings!
+  spree_product_assembly!
   spree_social!
   spree_subscriptions!
   spring
