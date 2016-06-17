@@ -8,6 +8,7 @@
  *= require_self
  *= require_tree .
  *= require spree/frontend/spree_subscriptions
+ *= require spree/frontend/spree_social
 */
 body {
   font-family: 'Lato', sans-serif !important;
