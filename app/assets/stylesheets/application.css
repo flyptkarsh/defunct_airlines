@@ -13,4 +13,28 @@
  *= require_tree .
  *= require_self
  */
- 
+ body {
+   font-family: 'Lato', sans-serif !important;
+   background: #000000 url("http://www.transparenttextures.com/patterns/large-leather.png") center center !important;
+   height: 100%;
+   overflow: scroll;
+   color: whitesmoke !important; 
+ }
+ .footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 60px;
+
+ }
+
+ #logo {
+   color: whitesmoke !important;
+   font-size: 36px;
+   font-family: 'Engagement', cursive !important;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Engagement', cursive !important;
+
+ }
