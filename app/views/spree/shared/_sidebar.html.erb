@@ -1,6 +1,8 @@
-<%= image_tag("http://www.gayartcollection.com/Media/Tom_of_Finland/Tom_of_Finland_25.jpg", width: "100%" )%>
-<!-- <h3> The Rich Leatherman Difference</h3>
-<p> We offer the best leather cleaning products to people who need to keep their leather wear immaculate at all times. </p>
-<p> Standard shipping is free on all orders.</p>
-<p> We offer subscriptions. So just as your leather cleaner is losing its gusto, a new one will arrive. </p>
-<p> Join our leather cleaner of the month club and try a new leather cleaner every month.</p> -->
+<nav id="taxonomies" class="sidebar-item" data-hook>
+  <% @taxonomies.each do |taxonomy| %>
+    <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+      <h4 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h4>
+      <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+    <% end %>
+  <% end %>
+</nav>

@@ -11,18 +11,51 @@
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
-    <%= render partial: 'spree/shared/header' %>
+    <ul class="navigation">
 
-    <div class="container">
-      <div class="row" data-hook>
-        <%= breadcrumbs(@taxon) %>
-        <div id="content" class="col-sm-9 col-md-8" data-hook>
-          <%= flash_messages %>
-          <%= yield %>
+      <%= render partial: 'spree/shared/login_bar' %>
+      <nav id="taxonomies" class="sidebar-item" data-hook>
+        <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+        <% @taxonomies.each do |taxonomy| %>
+          <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+            <li class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></li>
+            <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+          <% end %>
+        <% end %>
+      </nav>
+      <li id="link-to-cart" data-hook>
+        <noscript>
+          <%= link_to Spree.t(:cart), '/cart' %>
+        </noscript>
+        &nbsp;
+      </li>
+      <script>Spree.fetch_cart()</script>
+      <hr>
+      <li><a href="/">Shop</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger">  <h1> Rich Leatherman </h1></label>
+
+    <div class="site-wrap">
+        <br>
+        <br>
+        <br>
+        <div class="container">
+          <div class="row" data-hook>
+            <%= breadcrumbs(@taxon) %>
+            <div id="content" class="col-sm-12" data-hook>
+              <%= flash_messages %>
+              <%= yield %>
+            </div>
+
+            <%= yield :templates %>
+          </div>
         </div>
-
-        <%= yield :templates %>
-      </div>
     </div>
+
   </body>
 </html>
