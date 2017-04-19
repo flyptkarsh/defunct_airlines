@@ -1,6 +1,6 @@
 ## Defunct Airlines
 
-This is an e-commerce site I am developing as a means to explore the Spree API and Spree Subscriptions Gem.
+Exploratory code. 
 
 Dependencies
 * spree 3.0.9
